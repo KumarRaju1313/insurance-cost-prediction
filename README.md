@@ -1,41 +1,74 @@
-**Data**  
+# 💸 Insurance Charges Prediction
 
-The dataset used in this project is provided in the data directory. It includes various factors such as age, BMI, sex, smoker status, and region. Some columns include:  
+This project predicts individual medical insurance charges based on demographic and lifestyle factors using machine learning regression models.
 
-age  
-sex  
-bmi    
-children  
-smoker  
-region  
-charges  
-Methodology 
+---
 
-Data Exploration:  
+## 📁 Dataset
 
-Summary statistics and unique values in categorical columns.  
-Visualization of age, BMI, and charges distributions.  
+The dataset includes the following features:
 
-Data Preprocessing:  
+- `age` — Age of the policyholder  
+- `sex` — Gender  
+- `bmi` — Body Mass Index  
+- `children` — Number of dependents  
+- `smoker` — Smoker status  
+- `region` — Residential region  
+- `charges` — Target variable (Insurance premium)
 
+The dataset is available in the `data/` directory.
 
-Handle missing values.  
-Convert categorical variables to numerical using one-hot encoding.  
-Standardize numerical variables.  
-Model Training:  
+---
 
-Train various machine learning models, including KNN, Linear Regression, SVM, Decision Tree, and Random Forest.  
+## 📊 Methodology
 
-Model Evaluation:  
+### 🧪 Data Exploration
+- View summary statistics and unique categorical values.
+- Visualize distributions of key variables like age, BMI, and charges.
 
-Evaluate the models using Mean Absolute Error (MAE) as the metric.  
+### 🧼 Data Preprocessing
+- Handle missing values (if any).
+- Encode categorical variables using one-hot encoding.
+- Standardize numerical columns for uniformity.
 
-**Results**  
+### 🤖 Model Training
+Train the following regression models:
+- K-Nearest Neighbors (KNN)  
+- Linear Regression  
+- Support Vector Machine (SVM)  
+- Decision Tree Regressor  
+- Random Forest Regressor
 
-The Mean Absolute Error (MAE) of the different models on the test set are as follows:  
+### 📏 Model Evaluation
+- Metric: **Mean Absolute Error (MAE)** on the test set.
 
-KNN: 3532.651  
-Linear Regression: 4243.654    
-SVM: 8478.457  
-Decision Tree: 2817.277    
-Random Forest: 2575.895  
+---
+
+## 📈 Results
+
+| Model               | MAE        |
+|---------------------|------------|
+| KNN                 | 3532.65    |
+| Linear Regression   | 4243.65    |
+| SVM                 | 8478.46    |
+| Decision Tree       | 2817.28    |
+| Random Forest       | **2575.89** ✅ |
+
+---
+
+## 🔍 Conclusion
+
+- The **Random Forest Regressor** outperformed all other models with the lowest Mean Absolute Error of **2575.89**.
+- Simpler models like Linear Regression and SVM were less effective for this dataset.
+- Proper preprocessing (like encoding and scaling) had a significant impact on overall model performance.
+
+---
+
+## ⚙️ Tools Used
+
+- Python  
+- Pandas  
+- NumPy  
+- Matplotlib & Seaborn  
+- Scikit-learn  
+- Jupyter Notebook
